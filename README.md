@@ -21,13 +21,21 @@ The architecture of the AI Delivery Risk Agent is designed as a modular, Multi-A
 📂 Project Structure
 Plaintext
 ai-project-risk-agent/
+
 ├── app/
+
 │   ├── agent/        # Agent logic (Planner, Analyst, Reviewer, QA)
+
 │   ├── llm/          # LLM client & configuration
+
 │   ├── rag/          # Vector store & RAG logic
+
 │   └── config.py     # Environment settings
+
 ├── data/             # Knowledge base (retrospectives.xlsx)
+
 ├── main.py           # Entry point
+
 └── .env              # (Not committed) API credentials
 
 ## 🛠️ Technology Stack
@@ -55,5 +63,6 @@ python main.py
 Input: The agent will prompt you for project details (name, type, timeline, etc.).
 RAG Flow: On the first run, the system will parse retrospectives.xlsx to build the local FAISS index.
 Output: The agent will generate a structured risk report including technical analysis, mitigation plans, and a final confidence score.
+
 
 
