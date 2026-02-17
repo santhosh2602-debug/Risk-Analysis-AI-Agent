@@ -54,5 +54,3 @@ python main.py
 Input: The agent will prompt you for project details (name, type, timeline, etc.).
 RAG Flow: On the first run, the system will parse retrospectives.xlsx to build the local FAISS index.
 Output: The agent will generate a structured risk report including technical analysis, mitigation plans, and a final confidence score.
-
-
