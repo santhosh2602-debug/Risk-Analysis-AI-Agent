@@ -17,6 +17,7 @@ The architecture of the AI Delivery Risk Agent is designed as a modular, Multi-A
            Sequential Chaining: Agents execute in a specific order, where the output of one serves as the context for the next.
            Request Pacing: The Orchestrator enforces a 15-second cooling period between agent hand-offs. This prevents exceeding the 5–15 RPM (Requests Per Minute) limits of the Gemini API.
            Automatic Retries: The LLM client is configured with max_retries=6 to handle intermittent network issues or transient API throttling.
+
 📂 Project Structure
 Plaintext
 ai-project-risk-agent/
@@ -53,3 +54,4 @@ python main.py
 Input: The agent will prompt you for project details (name, type, timeline, etc.).
 RAG Flow: On the first run, the system will parse retrospectives.xlsx to build the local FAISS index.
 Output: The agent will generate a structured risk report including technical analysis, mitigation plans, and a final confidence score.
+
